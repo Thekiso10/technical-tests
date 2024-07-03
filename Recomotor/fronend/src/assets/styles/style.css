@@ -1,0 +1,98 @@
+#header {
+    margin-bottom: 2em;
+}
+
+#header header #title {
+    margin-left: 0.35em;
+    border-left: 2px solid #215732;
+    padding-left: 0.25em;
+    color: #215732;
+}
+
+#header header li a {
+    background-color: #215732;
+    padding: 0.5em 2em 0.5em 2em
+}
+
+
+main h1 {
+    color: #fff;
+    font-size: 2.6rem!important;
+    max-width: 27%;
+    text-align: center;
+}
+
+main .home-banner {
+    z-index: -1;
+    background-image: url(../../../public/banner.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25vh;
+}
+
+main section #acces-form form {
+    width: 22rem;
+    margin-top: 2em;
+}
+
+main section #acces-form form .form-group .form-control {
+    height: 48px;
+    color: #444 !important;
+    font-size: 14px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #215732;
+    padding-left: 30px;
+    padding-right: 0;
+    margin-bottom: 2.5em;
+    letter-spacing: 1px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+main section #acces-form form .form-group .icon {
+    position: absolute;
+    width: 20px;
+    height: 48px;
+    background: transparent;
+    font-size: 18px;
+    margin-left: 0.25em;
+}
+
+main section #acces-form form button {
+    --mdb-btn-margin-top: 0.5rem;
+    display: block;
+    width: 100%;
+    background-color: #215732;
+    color: #fff;
+    font-weight: 100;
+}
+
+#brand-list {
+    margin-top: 3em;
+}
+
+#brand-list .brand-box {
+    border: 3px solid #215732;
+    border-radius: 15px;
+    padding: 1em;
+    margin-bottom: 2em;
+    font-size: 21px;
+}
+
+#brand-list .brand-box span.weight {
+    font-weight: 600;
+}
+
+#brand-list .brand-box .model-box {
+    padding: 1em 1.5em 0.2em 1.5em;
+    border-bottom: 1px solid #215732;
+}
+
+#brand-list .brand-box .model-box button.favour i {
+    color: yellowgreen;
+}

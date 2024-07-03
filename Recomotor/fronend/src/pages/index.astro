@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout title="Welcome to Recomotor">
+	<main>
+		<Header href="/" title="Prueba técnica" textButton="Inicio"/>
+
+		<section>
+			<div class="home-banner d-flex flex-column align-items-center justify-content-center position-relative">
+				<h1 class="text-center">Bienvenido a la prueba técnica para Recomotor</h1>
+			</div>
+
+			<div id="alert-loguin"></div>
+
+			<div id="acces-form" class="w-100 p-4 d-flex justify-content-center pb-4">
+				<form id="form-login">
+					<h3 class="text-center mb-4">Acceder a lista de los coches</h3>
+
+					<div class="form-group">
+						<div class="icon d-flex align-items-center justify-content-center"><span class="fa fa-user"></span></div>
+						<input id="input-num-employer" type="number" class="form-control" placeholder="Numero de empleado" required="">
+					</div>
+				  
+					<button id="submit-employer" type="button" class="btn btn-block mb-4">Connectar</button>
+				</form>
+			</div>
+
+		</section>
+	</main>
+
+	<script src="../assets/js/index.js"></script>
+</Layout>

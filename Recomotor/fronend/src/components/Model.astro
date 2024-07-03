@@ -1,0 +1,38 @@
+---
+interface Props {
+	id: string;
+	name: string;
+	imgUrl: string;
+}
+
+const { id, name, imgUrl } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div id=`model-${id}` class="model-box">
+    <div class="row align-items-center">
+        <div class="col-2">
+            <Image src={imgUrl ?? '/sin-imagen.jpg'} alt="descriptive text" width="200" height="100"/>
+        </div>
+        <div class="col">
+           <em>Modelo: <strong class="weight">{name}</strong></em>
+        </div>
+        <div class="col text-end justify-content-end">
+            <button id=`buttonModel-${id}` class="btn start-model" type="button"><i class="fa-solid fa-star"></i></button>
+        </div>
+    </div>
+</div>
+
+<script>
+    import { addFavourModel } from '../assets/js/cars.js';
+
+    const buttons = document.querySelectorAll('button.start-model');
+    
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            addFavourModel(button.id);
+        });
+    });
+
+</script>

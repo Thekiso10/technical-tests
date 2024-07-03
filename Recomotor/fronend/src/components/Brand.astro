@@ -1,0 +1,34 @@
+---
+interface Props {
+	id: string;
+	name: string;
+	modelList: Array<JSON>;
+}
+
+const { id, name, modelList } = Astro.props;
+
+import Model from './Model.astro';
+---
+
+<div id=`brand-${id}` class="container brand-box">
+    <div class="row align-items-center">
+        <div class="col-10">
+           <em>Marca: <strong class="weight">{name}</strong></em>
+        </div>
+        <div class="col-2 text-end justify-content-end">
+            <button data-bs-toggle="collapse" data-bs-target=`#list-models-${id}` class="btn btn-outline-success" aria-expanded="false" aria-controls=`list-models-${id}` type="button">click!</button>
+        </div>
+    </div>
+
+    <div class="collapse mt-4" id=`list-models-${id}`>
+        <div>
+            {
+                modelList.map(({id, name, imgUrl}) => {
+                    return (
+                        <Model id={id} name={name} imgUrl={imgUrl}/>
+                    )
+                })
+            }
+        </div>
+    </div>
+</div>

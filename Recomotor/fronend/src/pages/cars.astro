@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Brand from '../components/Brand.astro';
+
+const brandsList = await fetch('http://localhost:8080/api/brands/').then((response) =>
+  response.json()
+);
+---
+
+<Layout title="Lista de coches">
+	<Header href="/" title="Prueba técnica" textButton="Cerrar sesión"/>
+
+	<h1 id="title-car-page" class="text-center">Lista de coches para </h1>
+
+	<div id="brand-list">
+		{
+			brandsList.map(({id, name, modelList}) => {
+				return (
+					<Brand id={id} name={name} modelList={modelList}/>
+				)
+			})
+		}
+	</div>
+
+	<script src="../assets/js/cars.js"></script>
+</Layout>
+
+<script>
+	import { getCookier } from '../assets/js/login.js';
+	const employer = getCookier('numEmployer');
+
+	document.getElementById("title-car-page").innerHTML += employer.name;
+
+</script>

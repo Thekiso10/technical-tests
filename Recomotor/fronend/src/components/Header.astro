@@ -1,0 +1,24 @@
+---
+interface Props {
+	title: string;
+	textButton: string;
+	href: string;
+}
+
+const { href, title, textButton } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+
+<div id="header" class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href={href} class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <Image src="/icon.png" alt="descriptive text" width="219" height="28"/>
+        <span id="title" class="fs-4">{title}</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href={href} id="button-nav-0" class="nav-link active" aria-current="page">{textButton}</a></li>
+      </ul>
+    </header>
+</div>
