@@ -1,4 +1,4 @@
-package com.ntt_data.inditex.backend.utils.exceptions;
+package com.ntt_data.inditex.backend.infrastracture.exceptions;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

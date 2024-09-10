@@ -1,7 +1,7 @@
-package com.ntt_data.inditex.backend.mapper;
+package com.ntt_data.inditex.backend.infrastracture.mapper;
 
-import com.ntt_data.inditex.backend.dto.PricesDTO;
-import com.ntt_data.inditex.backend.entity.PricesEntity;
+import com.ntt_data.inditex.backend.domain.model.Prices;
+import com.ntt_data.inditex.backend.infrastracture.entity.PricesEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;
@@ -14,5 +14,5 @@ public interface PricesMapper {
 
     @Mapping(source = "brand.id", target = "brandId")
     @Mapping(source = "product.id", target = "productId")
-    PricesDTO mapToDto(PricesEntity entity);
+    Prices mapToDto(PricesEntity entity);
 }

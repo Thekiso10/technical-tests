@@ -1,4 +1,4 @@
-package com.ntt_data.inditex.backend.entity;
+package com.ntt_data.inditex.backend.infrastracture.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

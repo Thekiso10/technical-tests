@@ -1,3 +1,7 @@
+DELETE FROM prices;
+DELETE FROM product;
+DELETE FROM brand;
+
 INSERT INTO brand (id, name) VALUES (1, 'ZARA');
 
 INSERT INTO product (id, name) VALUES (35455, 'Camiseta');

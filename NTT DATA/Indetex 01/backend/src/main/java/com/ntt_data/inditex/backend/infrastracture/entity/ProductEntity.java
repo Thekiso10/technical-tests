@@ -1,4 +1,4 @@
-package com.ntt_data.inditex.backend.entity;
+package com.ntt_data.inditex.backend.infrastracture.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -13,8 +13,8 @@ import java.util.Set;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "brand")
-public class BrandEntity {
+@Table(name = "product")
+public class ProductEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +22,6 @@ public class BrandEntity {
 
     private String name;
 
-    @OneToMany(mappedBy = "brand", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<PricesEntity> prices;
 }
